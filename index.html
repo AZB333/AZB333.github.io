@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleqzander Baker</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleqzander Baker | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Web Page</h1>
-    <p>This is where I will store all of my projects.</p>
-    <p>Feel free to explore and check back often for updates!</p>
+  <!-- Toggle Button -->
+  <button id="theme-toggle">🌙 Dark Mode</button>
 
-    <a target="_blank" href="https://app.powerbi.com/groups/me/rdlreports/dff4c0d5-05e6-4e7e-8d9a-bdc3e8891ec7?ctid=3ded8b1b-070d-4629-82e4-c0b019f46057&pbi_source=linkShare">My SSRS Report Builder Project</a>
+  <!-- Header -->
+  <header>
+    <h1>Aleqzander Baker</h1>
+    <p>Computer Science Student | Software Developer | Innovator</p>
+  </header>
 
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a third-year Computer Science student at CU Boulder with experience in
+      full-stack development, VR simulation, and data-driven applications.
+      I enjoy building projects that blend usability, performance, and scalability.
+    </p>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Aleqzander Baker</p>
-    </footer>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Inventory Management System</h3>
+        <p>A C# and ASP.NET application with PostgreSQL backend, adopted by CU Engineering Connections.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Virtual Reality Flood Simulation</h3>
+        <p>Unity-based VR simulation for safety research, including realistic water physics and hand tracking.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Full Stack Web App</h3>
+        <p>Flask + Node.js app using PostgreSQL, Dockerized deployment, and robust authentication.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with me:</p>
+    <a href="mailto:aleqzanderbaker@gmail.com">Email</a> |
+    <a href="https://linkedin.com/in/aleqzanderbaker" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/AZB333" target="_blank">GitHub</a>
+  </footer>
+
+  <!-- Script for Dark Mode -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark');
+      toggleBtn.textContent = '☀️ Light Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        toggleBtn.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        toggleBtn.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
 </body>
 </html>

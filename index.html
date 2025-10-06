@@ -20,9 +20,9 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a third-year Computer Science student at CU Boulder with experience in
-      full-stack development, VR simulation, and data-driven applications.
-      I enjoy building projects that blend usability, performance, and scalability.
+      I am a third year student at the University of Colorado Boulder majoring in Computer Science and minoring in Business.
+      I have experience with Full Stack Web Development (HTML, CSS, JavaScript, APIs, SQL), Relational Database Management (SQL, MySQL, PostgreSQL, SSRS, SSMS, Microsoft Report Builder), data science (Python), 
+      Data Structures and Algorithms (C, C++, JavaScript, Python), and Virtual Reality Development (C#, Unity).
     </p>
   </section>
 
@@ -31,19 +31,22 @@
     <h2>Projects</h2>
     <div class="project-list">
       <div class="project-card">
-        <h3>Inventory Management System</h3>
-        <p>A C# and ASP.NET application with PostgreSQL backend, adopted by CU Engineering Connections.</p>
-        <a href="#">View Project</a>
+        <h3>Music Training Website</h3>
+        <p>A passion project to improve the ear of musicians at any level. This website uses standard HTML and CSS, but implements an adapted version of the Fourier Process to interpret user input and relate it to the MIDI notes of the given frequencies.</p>
+        <p>⚠️Note: The current algorithm for pitch detection is very primitive, but I am exploring other methods to enhance accuracy and increase noise filtering.</p>
+        <a target="_blank" href="https://azb333.github.io/ChordGuessLandingPage/">View Project</a>
       </div>
       <div class="project-card">
-        <h3>Virtual Reality Flood Simulation</h3>
-        <p>Unity-based VR simulation for safety research, including realistic water physics and hand tracking.</p>
-        <a href="#">View Project</a>
+        <h3>Mock Movie Data Report</h3>
+        <p>An initial mini project to become familiar with Microsoft SSRS, SSMS, and Report Builder. The project uses the Sakila sample database to create simple reports.</p>
+        <p>⚠️Note: Microsoft does not allow non work or school accounts to create a PowerBI account, so the project is currently a pdf while I figure out how to directly share the published report.</p>
+        <a target="_blank" href="SakilaReport.pdf">View Project</a>
       </div>
       <div class="project-card">
-        <h3>Full Stack Web App</h3>
-        <p>Flask + Node.js app using PostgreSQL, Dockerized deployment, and robust authentication.</p>
-        <a href="#">View Project</a>
+        <h3>Stellar Sync Astrology Website</h3>
+        <p>A group project that I led to create a simple full stack web app. We used the Agile Methodology to report to a scrum master, applying HTML, Handlebars, CSS, JS, PostgreSQL, OpenAI API calls, and Node.js.</p>
+        <p>⚠️Error Note: the project used Render for deployment, but our Render database has been deleted, so the site is down for maintenance.</p>
+        <a target="_blank" href="https://stellar-sync-hggb.onrender.com/landing">View Project</a>
       </div>
     </div>
   </section>
@@ -57,25 +60,8 @@
   </footer>
 
   <!-- Script for Dark Mode -->
-  <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme');
+  <script src="script.js">
 
-    if (currentTheme === 'dark') {
-      document.body.classList.add('dark');
-      toggleBtn.textContent = '☀️ Light Mode';
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if (document.body.classList.contains('dark')) {
-        toggleBtn.textContent = '☀️ Light Mode';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        toggleBtn.textContent = '🌙 Dark Mode';
-        localStorage.setItem('theme', 'light');
-      }
-    });
   </script>
 </body>
 </html>

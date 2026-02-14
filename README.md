@@ -6,4 +6,4 @@ Feel free to roam around and play any of the games!
 
 Website: [Aleqzander Webpage](https://aleqzander.com)
 
-LinkedIn: [Aleqzander LinkedIn](https://linked.com/aleqzanderbaker)
+LinkedIn: [Aleqzander LinkedIn](https://linked.com/aleqzanderbaker) 

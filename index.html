@@ -1,67 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aleqzander Baker | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Projects & Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Toggle Button -->
-  <button id="theme-toggle">🌙 Dark Mode</button>
+    <div class="container">
+        <header>
+            <h1>Aleqzander Baker</h1>
+            <p class="subtitle">Developer / Creator / Designer</p>
+        </header>
 
-  <!-- Header -->
-  <header>
-    <h1>Aleqzander Baker</h1>
-    <p>Computer Science Student | Software Developer | Innovator</p>
-  </header>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a third year student at the University of Colorado Boulder majoring in Computer Science and minoring in Business.
-      I have experience with Full Stack Web Development (HTML, CSS, JavaScript, APIs, SQL), Relational Database Management (SQL, MySQL, PostgreSQL, SSRS, SSMS, Microsoft Report Builder), data science (Python), 
-      Data Structures and Algorithms (C, C++, JavaScript, Python), and Virtual Reality Development (C#, Unity).
-    </p>
-  </section>
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p class="section-description">
+                    A collection of websites and web applications I've built, ranging from experimental concepts to production-ready platforms.
+                </p>
+            </div>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Music Training Website</h3>
-        <p>A passion project to improve the ear of musicians at any level. This website uses standard HTML and CSS, but implements an adapted version of the Fourier Process to interpret user input and relate it to the MIDI notes of the given frequencies.</p>
-        <p>⚠️Note: The current algorithm for pitch detection is very primitive, but I am exploring other methods to enhance accuracy and increase noise filtering.</p>
-        <a target="_blank" href="https://azb333.github.io/ChordGuessLandingPage/">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Mock Movie Data Report</h3>
-        <p>An initial mini project to become familiar with Microsoft SSRS, SSMS, and Report Builder. The project uses the Sakila sample database to create simple reports.</p>
-        <p>⚠️Note: Microsoft does not allow non work or school accounts to create a PowerBI account, so the project is currently a pdf while I figure out how to directly share the published report.</p>
-        <a target="_blank" href="SakilaReport.pdf">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Stellar Sync Astrology Website</h3>
-        <p>A group project that I led to create a simple full stack web app. We used the Agile Methodology to report to a scrum master, applying HTML, Handlebars, CSS, JS, PostgreSQL, OpenAI API calls, and Node.js.</p>
-        <p>⚠️Error Note: the project used Render for deployment, but our Render database has been deleted, so the site is down for maintenance.</p>
-        <a target="_blank" href="https://stellar-sync-hggb.onrender.com/landing">View Project</a>
-      </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <span class="project-tag">Web App</span>
+                    <h3>Project Name</h3>
+                    <p>A brief description of your project. What problem does it solve? What technologies did you use? What makes it interesting?</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary">View Live →</a>
+                        <a href="#" class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-tag">E-Commerce</span>
+                    <h3>Another Project</h3>
+                    <p>Description of another project you've worked on. Highlight key features, challenges overcome, or unique aspects of the implementation.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary">View Live →</a>
+                        <a href="#" class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-tag">Dashboard</span>
+                    <h3>Third Project</h3>
+                    <p>Your third project description. What was your role? What did you learn? What technologies powered it?</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary">View Live →</a>
+                        <a href="#" class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-tag">API</span>
+                    <h3>Another Project</h3>
+                    <p>Details about this project, its purpose, and the technology stack used to bring it to life.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary">View Live →</a>
+                        <a href="#" class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games">
+            <div class="section-header">
+                <h2>Web Games</h2>
+                <p class="section-description">
+                    Interactive games and playful experiments built with HTML5, Canvas, and JavaScript. Click to play directly in your browser.
+                </p>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-preview">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Game Title</h3>
+                        <p>A fun description of your game. What's the gameplay like? What makes it engaging?</p>
+                        <div class="game-meta">
+                            <span>🎮 Arcade</span>
+                            <span>⭐ Single Player</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-preview">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Another Game</h3>
+                        <p>Description of your second game. What technologies did you use? Canvas? WebGL? Three.js?</p>
+                        <div class="game-meta">
+                            <span>🎯 Puzzle</span>
+                            <span>⏱️ Time Challenge</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-preview">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Third Game</h3>
+                        <p>Your third game's description. Share what inspired it or what players can expect.</p>
+                        <div class="game-meta">
+                            <span>🚀 Action</span>
+                            <span>👥 Multiplayer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-preview">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Fourth Game</h3>
+                        <p>Description of your fourth game. What makes this one special or different from the others?</p>
+                        <div class="game-meta">
+                            <span>🧩 Strategy</span>
+                            <span>🏆 High Score</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="social-links">
+                <a target="_blank" href="https://github.com/azb333">GitHub</a>
+                <a target="_blank" href="https://www.linkedin.com/in/aleqzanderbaker/">LinkedIn</a>
+                <a href="#">Email</a>
+            </div>
+        </footer>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>Connect with me:</p>
-    <a href="mailto:aleqzanderbaker@gmail.com">Email</a> |
-    <a href="https://linkedin.com/in/aleqzanderbaker" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/AZB333" target="_blank">GitHub</a>
-  </footer>
-
-  <!-- Script for Dark Mode -->
-  <script src="script.js">
-
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>

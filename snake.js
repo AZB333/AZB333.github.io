@@ -3,7 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const ctx = canvas.getContext("2d");
     const overlay = document.getElementById("playOverlay");
 
-    const gridSize = 20;
+    const TILE_COUNT = 20;
+    let gridSize;
+
+    function getStartSnake() {
+    return [
+        { x: 10, y: 10 },
+        { x: 9, y: 10 },
+        { x: 8, y: 10 }
+    ];
+}
 
     let gameRunning = false;
     overlay.addEventListener("click", () => {
@@ -19,28 +28,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const size = Math.min(window.innerWidth * 0.5, 500);
         canvas.width = size;
         canvas.height = size;
+
+        gridSize = canvas.width / TILE_COUNT;
     }
 
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    function getTileCount() {
-        return canvas.width / gridSize;
-    }
-
-    let snake = [
-        { x: 12, y: 10 }, // head
-        { x: 11, y: 10 },
-        { x: 10, y: 10 }
-    ];
+    let snake = getStartSnake();
     let direction = { x: 1, y: 0 }; // start moving immediately
     let food = spawnFood();
     let score = 0;
 
     function spawnFood() {
         return {
-            x: Math.floor(Math.random() * getTileCount()),
-            y: Math.floor(Math.random() * getTileCount())
+            x: Math.floor(Math.random() * TILE_COUNT),
+            y: Math.floor(Math.random() * TILE_COUNT)
         };
     }
 
@@ -51,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         if (
-            head.x < 0 || head.x >= getTileCount() ||
-            head.y < 0 || head.y >= getTileCount() ||
+            head.x < 0 || head.x >= TILE_COUNT ||
+            head.y < 0 || head.y >= TILE_COUNT ||
             snake.some(s => s.x === head.x && s.y === head.y)
         ) {
             resetGame();
@@ -84,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function resetGame() {
-        snake = [{ x: 10, y: 10 }];
+        snake = getStartSnake();
         direction = { x: 1, y: 0 };
         score = 0;
         document.getElementById("score").innerText = "Score: 0";

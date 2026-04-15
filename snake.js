@@ -172,4 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
     canvas.addEventListener("touchmove", e => {
         e.preventDefault();
     }, { passive: false });
+
+    canvas.addEventListener("touchstart", e => {
+        e.preventDefault();
+    }, { passive: false });
 });
